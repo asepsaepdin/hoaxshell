@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-%E2%89%A5%203.11-yellow.svg)](https://www.python.org/) 
 <img src="https://img.shields.io/badge/PowerShell-%E2%89%A5%20v5.1-blue">
-<img src="https://img.shields.io/badge/Tested%20with-kali%20linux%202023.2-blueviolet">
+<img src="https://img.shields.io/badge/Developed%20on-kali%20linux-blueviolet">
 <img src="https://img.shields.io/badge/Maintained%3F-Yes-96c40f">
 
 ******
