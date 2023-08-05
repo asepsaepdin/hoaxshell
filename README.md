@@ -25,6 +25,7 @@ This c2 concept (which could be implemented by using protocols other than http o
 ![bypass](https://github.com/asepsaepdin/hoaxshell/assets/122620685/a00ade63-5e5d-4663-80fd-b7e9b0d4c755)
 
 
+******
 ## Step Guides
 1. First, install all the requirements
 ```
@@ -51,10 +52,7 @@ systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct
 ```
 
-## Exploit Requirements
-- Python 3.11
-
-
+******
 ## Credits
 - https://github.com/t3l3machus/hoaxshell#AV-Bypass-PoCs
 - https://www.youtube.com/watch?v=3HddKylkRzM
