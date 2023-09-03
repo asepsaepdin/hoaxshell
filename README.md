@@ -1,20 +1,20 @@
-<h1 style="font-size:10vw" align="left">Bypassing an Active Windows Security</h1>
+<h1 style="font-size:10vw" align="left">HoaxShell - Bypassing an Active Windows Security</h1>
 
-[![Python](https://img.shields.io/badge/Python-%E2%89%A5%203.11-yellow.svg)](https://www.python.org/) 
-<img src="https://img.shields.io/badge/PowerShell-%E2%89%A5%20v5.1-blue">
-<img src="https://img.shields.io/badge/Developed%20on-kali%20linux-blueviolet">
+
+[![Python](https://img.shields.io/badge/Python-%E2%89%A5%203.11-blueviolet.svg)](https://www.python.org/) <img src="https://img.shields.io/badge/Antivirus%20Bypassed-%E2%89%A5%20Yes-blue">
 <img src="https://img.shields.io/badge/Maintained%3F-Yes-96c40f">
+
 
 ******
 ⚠️ *For educational and authorized security research purposes only*
 
 
 ## Original Exploit Authors
-very grateful to the original author [t3l3machus](https://github.com/t3l3machus)
+Very grateful to the original script author [t3l3machus](https://github.com/t3l3machus)
 
 
 ## Description
-hoaxshell is a windows reverse shell payload generator and handler that abuses the http(s) protocol to establish a beacon-like reverse shell, based on the following concept:  
+Hoaxshell is a windows reverse shell payload generator and handler that abuses the http(s) protocol to establish a beacon-like reverse shell, based on the following concept:  
 
 ![image](https://user-images.githubusercontent.com/75489922/197529603-1c9238ea-af14-41f7-8834-dd37ad77e809.png)
 
@@ -51,6 +51,7 @@ systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ```
 Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct
 ```
+
 
 ******
 ## Credits
